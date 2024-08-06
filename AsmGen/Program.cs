@@ -101,7 +101,7 @@ namespace AsmGen
             sb.AppendLine("#define _GNU_SOURCE");
             sb.AppendLine("#include <stdio.h>\n#include<stdint.h>\n#include<sys/time.h>\n#include <stdlib.h>\n#include <string.h>\n#include <time.h>\n");
             sb.AppendLine("#pragma GCC diagnostic ignored \"-Wattributes\"");
-            string commonFunctions = File.ReadAllText($"{DataFilesDir}\\CommonFunctions.c");
+            string commonFunctions = File.ReadAllText($"{DataFilesDir}/CommonFunctions.c");
             sb.AppendLine(commonFunctions);
 
             foreach (IUarchTest test in tests)
